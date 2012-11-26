@@ -1,0 +1,76 @@
+@(problems: List[models.Problem]) @main("THE Assessment") {
+
+
+<div class="page-header">
+	<h1>Der Henri-Nannen-Test von 2011</h1>
+</div>
+<br>
+@for(i <- problems.indices){
+<div class="well well-large">
+		<strong>
+			@(i+1).) @Html(problems(i).getQuestion()) <br> <br>
+		</strong>
+		@if(problems(i).getType() == models.Problem.InputType.RADIO){ 
+			<form class="form-horizontal">
+			 	<div class="control-group">
+			 	 <label class="control-label">Antwort:</label>
+			@for(o <- problems(i).getOptions()){
+				     <div class="controls">
+					<label class="radio"> 
+						<input type="radio" name="option_@i">@Html(o)
+					</label>
+					</div>
+				}
+				</div>			
+			</form>
+		}
+		@if(problems(i).getType() == models.Problem.InputType.SIMPLE_ANSWER){
+			<form class="form-horizontal">
+			 	<div class="control-group">
+					 <label class="control-label">Antwort:</label>
+					     <div class="controls">
+					      <textarea rows="1"></textarea>
+					    </div>
+					    <br>
+				</div>			
+			</form>
+		}
+		@if(problems(i).getType() == models.Problem.InputType.CHECKBOX){
+				<form class="form-horizontal">
+			 	<div class="control-group">
+			 	 <label class="control-label">Antwort:</label>
+			@for(o <- problems(i).getOptions()){
+		     <div class="controls">	
+				<label class="checkbox">
+    			  <input type="checkbox" name="option_@i">@Html(o)
+    			</label>
+    			</div>
+				}    
+			</div>			
+			</form>
+		}
+		@if(problems(i).getType() == models.Problem.InputType.INLINE_ANSWER){
+			<form class="form-horizontal">
+			 	<div class="control-group">
+				@for(o <- problems(i).getOptions()){
+					 <label class="control-label">@Html(o)</label>
+					     <div class="controls">
+					      <input type="text" id="text_@o">
+					    </div>
+					    <br>
+					}    
+				</div>			
+			</form>
+		}
+	<br> <a class="muted" data-toggle="collapse"
+		data-target="#answer_text_@i">Lösung:</a>
+	<div id="answer_text_@i" class="collapse">
+		<ul>
+			@for(a <- problems(i).getAnswers){
+			<li>@Html(a)</li> 
+			}
+		</ul>
+	</div>
+</div>
+} 
+}

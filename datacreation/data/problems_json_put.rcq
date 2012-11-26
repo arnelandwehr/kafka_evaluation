@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rest-client version="3.1"><request><http-version>1.1</http-version><http-follow-redirects/><URL>http://localhost:9000/problems</URL><method>PUT</method><body><string content-type="text/plain" charset="UTF-8">{
+    "problems" : 
+    [
+	{
+	    "question": "Wer hat gesagt \"Die Sicherheit der Bundesrepublik Deutschland wird auch am Hindukusch verteidigt\"?",
+	    "type": "RADIO",
+	    "options" :
+	    [
+		"Hamid Karzai",
+		"Peter Struck",
+		"Franz Josef Jung ",
+		"Karl-Theodor zu Guttenberg",
+		"Che Guevara",
+		"Angela Merkel"
+	    ],
+	    "answer" :  [ "Peter Struck" ]
+	},
+
+	{
+	    "question" : "Wir nennen Ihnen drei Chefs. Sie nennen uns die drei Bundesbeh&amp;ouml;rden, denen sie vorstehen.",
+	    "type": "INLINE_ANSWER",
+	    "options" :
+	    [
+		"J&amp;ouml;rg Ziercke",
+		"Monika Harms",
+		"Ernst Uhrlau"
+	    ],
+	    "answer" :
+	    [
+		"Bundeskriminalamt",
+		"Beh&amp;ouml;rde des Generalbundesanwalts",
+		"Bundesnachrichtendienst"
+	    ]
+	},
+
+	{
+	    "question" : "Wie hoch ist maximal das vom Staat gezahlte monatliche Elterngeld - und wie lange wird es maximal gezahlt?",
+	    "type": "SIMPLE_ANSWER",
+	    "answer" :  [ "1800 Euro, maximal 14 Monate " ]
+	},
+
+	{
+	    "question" : "Nennen Sie die Namen der vier grossen Energie-Unternehmen in Deutschland.",
+	    "type": "SIMPLE_ANSWER",
+	    "answer" :
+	    ["E.on",
+	     "RWE",
+	     "Vattenfall",
+	     "EnBW"]
+	},
+	{
+	    "question" : "Was verbirgt sich hinter dem Begriff Desertec?",
+	    "type":"SIMPLE_ANSWER", 
+	    "answer" :  [ "Sinngem&amp;auml;ss: Der Plan, Solarkraftwerke in der Sahara zu errichten und sie an das europ&amp;auml;ische Stromnetz anzubinden " ]
+	},
+
+	{
+	    "question" : "Was der DAX f&amp;uuml;r Frankfurt, ist der FTSE f&amp;uuml;r:",
+	    "type": "SIMPLE_ANSWER",
+	    "answer" :  [ "London " ]
+	},
+
+	{
+	    "question" : "Wie viele Staaten sind Mitglied der Europ&amp;auml;ischen Union?",
+	    "type": "SIMPLE_ANSWER",
+	    "answer" :  [ "27 " ]
+	},
+
+	{
+	    "question" : "Wie viele Staaten haben den Euro eingef&amp;uuml;hrt?",
+	    "type": "SIMPLE_ANSWER",
+	    "answer" :  [ "17 " ]
+	},
+	{
+	    "question" : "Die Milliardenhilfen f&amp;uuml;r Griechenland werden von einer Troika zusammengestellt. Nennen Sie deren Mitglieder.",
+	    "type": "SIMPLE_ANSWER",
+	    "answer" :  [ "EU-Kommission, Europ&amp;auml;ische Zentralbank, IWF " ]
+	},
+	{
+	    "question" : "Kreuzen Sie von den folgenden Staaten jene an, in denen es Lehrerinnen landesweit verboten ist, in staatlichen Schulen ein Kopftuch zu tragen",
+	    "type":"CHECKBOX", 
+	    "options" :
+	    [
+		"&amp;Ouml;sterreich",
+		"Frankreich",
+		"Grossbritannien",
+		"T&amp;uuml;rkei",
+		"Iran",
+		"Deutschland"
+	    ],
+	    "answer" :
+	    ["&amp;Ouml;sterreich (nein, nicht verboten)",
+	     "Frankreich (ja)",
+	     "Grossbritannien (nein)",
+	     "T&amp;uuml;rkei (ja)",
+	     "Iran (nein)",
+	     "Deutschland (nein - da nicht landesweit verboten, sondern nur in einigen Bundesl&amp;auml;ndern)"
+	    ]
+	},
+	{
+	    "question" : "Wer ist Luis Moreno Ocampo?",
+	    "type": "SIMPLE_ANSWER",
+	    "answer" :  [ "Der Chefankl&amp;auml;ger am Internationalen Strafgerichtshof in Den Haag. " ]
+	},
+	{
+	    "question" : "Welche L&amp;auml;nder enthielten sich im M&amp;auml;rz 2011 bei der Abstimmung im UN-Sicherheitsrat &amp;uuml;ber die Einrichtung einer Flugverbotszone &amp;uuml;ber Libyen?",
+	    "type": "SIMPLE_ANSWER",
+	    "answer" :  [ "Deutschland, China, Russland, Brasilien und Indien " ]
+	},
+	{
+	    "question" : "Bitte die fehlenden Ortsnamen einsetzen:",
+	    "type": "INTEXT_ANSWER",
+	    "options" : [
+		"Der arabische Fr&amp;uuml;hling 2011 f&amp;uuml;hrte dazu, dass der [ANSWER]-Platz in Kairo weltber&amp;uuml;hmt wurde, die libyschen Rebellen [ANSWER] zu ihrer Hauptstadt erkl&amp;auml;rten, Truppen aus [ANSWER] in Bahrein einr&amp;uuml;ckten, der Pr&amp;auml;sident von [ANSWER] die Notstandsgesetze aufhob, die seit Jahren verschlossene Grenze zwischen [ANSWER] und [ANSWER] ge&amp;ouml;ffnet wurde"
+	    ],
+	    "answer" :  [ "Tahrir-Platz / Benghazi (wir akzeptieren auch andere Schreibweisen) / Saudi-Arabien / Syrien / Gaza-Streifen und &amp;Auml;gypten " ]
+	},
+	{
+	    "question" : "Von L&amp;uuml;beck aus reisen Sie, zun&amp;auml;chst Richtung Osten, auf dem Landweg nach Oslo - und zwar entlang der gesamten Ostseek&amp;uuml;ste. Bitte z&amp;auml;hlen Sie, in der geographisch korrekten Reihenfolge, alle Staaten auf, durch die Sie fahren.",
+	    "type": "SIMPLE_ANSWER",
+	    "answer" :  [ "Polen / Russland (Exklave Kaliningrad) / Litauen / Lettland / Estland / Russland / Finnland / Schweden / Norwegen " ]
+	},
+	{
+	    "question" : "Wer waren:",
+	    "type": "INLINE_ANSWER",
+	    "options" :
+	    [
+		"Augustus?",
+		"Augustinus? ",
+		"August der Starke?"
+	    ],
+	    "answer" :
+	    [
+		"14. n. Chr., Nachfolger von Caesar",
+		"Einer der bedeutendsten christlichen Kirchenlehrer und Philosophen, lebte in der Sp&amp;auml;tantike, genauer: 354 - 430 n. Chr.",
+		"Kurf&amp;uuml;rst von Sachsen, sp&amp;auml;ter auch K&amp;ouml;nig von Polen, 1670 - 1733, liess Dresden zur barocken Prunkstadt ausbauen"
+	    ]
+	},
+	{
+	    "question" : "Welcher Streit f&amp;uuml;hrte zur Spaltung der muslimischen Glaubensgemeinschaft in Sunniten und Schiiten?",
+	    "type":"SIMPLE_ANSWER",
+	    "answer" :  [ "Sinngem&amp;auml;ss: Sie waren sich uneins &amp;uuml;ber die rechtm&amp;auml;ssigen Nachfolger des Propheten Mohammed " ]
+	},
+	{
+	    "question" : "Wir nennen Ihnen f&amp;uuml;nf Diktatoren des 20. Jahrhunderts. Sie nennen das Land, in dem sie herrschten:",
+	    "type": "INLINE_ANSWER",
+	    "options" :
+	    [
+		"Ant&amp;oacute;nio de Oliveira Salazar ",
+		"Fulgencio Batista ",
+		"Idi Amin",
+		"Pol Pot",
+		"Jorge Rafael Videla"
+	    ],
+	    "answer" : 
+	    [
+		"Portugal",
+		"Kuba",
+		"Uganda",
+		"Kambodscha",
+		"Argentinien"
+	    ]
+	},
+	{
+	    "question" : "Zwischen welchen Staaten wurde 1972 der Grundlagenvertrag geschlossen?",
+	    "type": "SIMPLE_ANSWER",
+	    "answer" :  [ "Vertrag zwischen der Bundesrepublik Deutschland und der DDR " ]
+	},
+	{
+	    "question" : "34 Menschen wurden von Mitgliedern der RAF ermordet. An welche erinnern Sie sich? Notieren Sie die Namen und beruflichen Positionen (maximal f&amp;uuml;nf):",
+	    "type": "SIMPLE_ANSWER",
+	    "answer" : 
+	    [
+		"Ponto, Vorstandssprecher der Dresdner Bank",
+		"Siegfried Buback, Generalbundesanwalt",
+		"Hanns-Martin Schleyer, Pr&amp;auml;sident der Bundesvereinigung der Deutschen Arbeitgeberverb&amp;auml;nde",
+		"Alfred Herrhausen, Vorstandssprecher der Deutschen Bank",
+		"Detlev Karsten Rohwedder, Vorstandsvorsitzender der Treuhandanstalt"
+	    ]
+	},
+	{
+	    "question" : "Welche Stile pr&amp;auml;gten diese K&amp;uuml;nstler?",
+	    "type": "INLINE_ANSWER",
+	    "options" :
+	    [
+		"Claude Monet",
+		"Raffael",
+		"Roy Lichtenstein",
+		"Franz Marc",
+		"Salvador Dal&amp;iacute;"
+	    ],
+	    "answer" : 
+	    [
+		"Claude Monet - Impressionismus",
+		"Raffael - Renaissance",
+		"Roy Lichtenstein - Pop-Art",
+		"Franz Marc - Expressionismus",
+		"Salvador Dal&amp;iacute; - Surrealismus"
+	    ]
+	},
+	{
+	    "question" : "Zwei der weltweit wichtigsten Ausstellungen zeitgen&amp;ouml;ssischer Kunst werden regelm&amp;auml;ssig an der Adria und in Hessen veranstaltet. Wie heissen sie, in welcher Stadt finden sie jeweils statt?",
+	    "type":"SIMPLE_ANSWER",
+	    "answer" :  [ "Biennale / Venedig, Documenta / Kassel" ]
+	},
+	{
+	    "question" : "Ordnen Sie diesen vier in den letzten Jahren ber&amp;uuml;hmt gewordenen chinesischen K&amp;uuml;nstlern die Aussage zu, die auf sie zutrifft (Notieren Sie hinter jedem Namen die entsprechende Ziffer): 1) Er ist Friedensnobelpreistr&amp;auml;ger. 2) Er ist Literaturnobelpreistr&amp;auml;ger. 3) Er ist Pianist. 4) Er wurde wegen angeblichen Steuerbetrugs verhaftet.",
+	    "type": "INLINE_ANSWER",
+	    "options" :
+	    [
+		"Ai Weiwei",
+		"Liu Xiaobo",
+		"Gao Xingjian",
+		"Lang Lang"
+	    ],
+	    "answer" :
+	    [
+		"Ai Weiwei (4)",
+		"Liu Xiaobo (1)",
+		"Gao Xingjian (2)",
+		"Lang Lang (3)"
+	    ]
+	},
+	{
+	    "question" : "Die h&amp;ouml;chste Stimmlage beim Gesang ist der Sopran. Nennen Sie weitere Stimmlagen, bitte in absteigender Reihenfolge, also die tiefste zuletzt.",
+	    "type": "SIMPLE_ANSWER",
+	    "answer" :  [ "Mezzosopran, Alt, Tenor, Bariton, Bass " ]
+	},
+	{
+	    "question" : "Erkl&amp;auml;ren Sie kurz diese Begriffe aus der Musik:",
+	    "type" : "INLINE_ANSWER", 
+	    "options" :
+	    [
+		"Oktave",
+		"Crescendo",
+		"Requiem",
+		"Scherzo"
+	    ],
+	    "answer" : 
+	    [
+		"Oktave: Intervall aus acht Tonstufen, Tonleiter",
+		"Crescendo: Vortragsbezeichnung: allm&amp;auml;hliches Anwachsen der Tonst&amp;auml;rke",
+		"Requiem: Totenmesse",
+		"Scherzo: Tonst&amp;uuml;ck von heiterem Charakter"
+	    ]
+	},
+	{
+	    "question" : "Nennen Sie die vier wichtigsten Instrumentengruppen eines Sinfonieorchesters.",
+	    "type": "SIMPLE_ANSWER",
+	    "answer" :  [ "Streicher, Holzbl&amp;auml;ser, Blechbl&amp;auml;ser, Schlaginstrumente " ]
+	},
+	{
+	    "question" : "Bei welchem Prachtbau in Rom regnet es seit &amp;uuml;ber 1800 Jahren durchs Dach? ",
+	    "type": "SIMPLE_ANSWER",
+	    "answer" :  [ "Pantheon - mit kreisrundem Loch in Kuppel " ]
+	},
+	{
+	    "question" : "Dramatische Frauenrollen im Theater - wer hat sie erfunden? ",
+	    "type":"INLINE_ANSWER",
+	    "options" :
+	    [
+		"Mutter Courage",
+		"Gretchen",
+		"Drei Schwestern",
+		"Ophelia",
+		"Emilia Galotti"
+	    ],
+	    "answer" : 
+	    [
+		"Mutter Courage - Bertolt Brecht ",
+		"Gretchen - Johann Wolfgang von Goethe",
+		"Drei Schwestern - Anton Tschechow",
+		"Ophelia - William Shakespeare",
+		"Emilia Galotti - Gotthold Ephraim Lessing"
+	    ]
+	},
+	{
+	    "question" : "Tierisch gute Weltliteratur wer schrieb diese B&amp;uuml;cher?",
+	    "type": "INLINE_ANSWER",
+	    "options" :
+	    [
+		"Der Seewolf",
+		"Katz und Maus",
+		"Tiere essen",
+		"Herr der Fliegen",
+		"Von M&amp;auml;usen und Menschen",
+		"Der Schimmelreiter"
+	    ],
+	    "answer" :
+	    [
+		"Der Seewolf - Jack London ",
+		"Katz und Maus - G&amp;uuml;nter Grass",
+		"Tiere essen - Jonathan Safran Foer",
+		"Herr der Fliegen - William Golding",
+		"Von M&amp;auml;usen und Menschen - John Steinbeck",
+		"Der Schimmelreiter - Theodor Storm"
+	    ]
+	},
+	{
+	    "question" : "Erfolgreiche deutsche Filme - wer f&amp;uuml;hrte Regie?",
+	    "type":"INLINE_ANSWER",
+	    "options" :
+	    [
+		"Der Untergang",
+		"Metropolis",
+		"Der Schuh des Manitu",
+		"Keinohrhasen",
+		"Der Baader Meinhof Komplex"
+	    ],
+	    "answer" : 
+	    [
+		"Der Untergang - Oliver Hirschbiegel ",
+		"Metropolis - Fritz Lang",
+		"Der Schuh des Manitu - Michael Bully Herbig",
+		"Keinohrhasen - Til Schweiger",
+		"Der Baader Meinhof Komplex - Uli Edel"
+	    ]
+	}
+    ]    
+}</string></body></request></rest-client>
