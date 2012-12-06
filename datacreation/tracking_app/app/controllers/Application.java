@@ -5,8 +5,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import javax.swing.plaf.metal.MetalBorders.Flush3DBorder;
-
 import models.Problem;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -38,7 +36,7 @@ public class Application extends Controller {
 	public static Result authenticate() {
 
 		Map<String, String[]> body = request().body().asFormUrlEncoded();
-		session("user", body.get("user")[0].replaceAll("\\s*", "_"));
+		session("user", body.get("user")[0].replaceAll("\\s+", "_"));
 		return redirect(routes.Application.getAssessmentPage());
 	}
 
@@ -56,14 +54,13 @@ public class Application extends Controller {
 		String text = request().body().asText();
 		BasicDBObject object = (BasicDBObject) JSON.parse(text);
 		String user = session("user");
-		String requestId = flash("requestId");
+		String requestId = session("requestId");
 		object.put("user", user);
 		object.put("requestId", requestId);
 		DBCollection dbCollection = DB.getDb().getCollection("messages_"+user);
 		dbCollection.save(object);
 		
-		KafkaProducer.instance().sendMessageToTopic("user_messages", text);
-		KafkaProducer.instance().sendMessageToTopic(user+"_"+requestId, text);
+		KafkaProducer.instance().sendMessageToTopic("user_messages", object.toString());
 		
 		return created();
 	}
@@ -84,7 +81,7 @@ public class Application extends Controller {
 	@Security.Authenticated(Secured.class)
 	public static Result getAssessmentPage() {
 
-		flash("requestId", System.currentTimeMillis()+"");
+		session("requestId", System.currentTimeMillis()+"");
 		
 		DBCollection collection = DB.getDb().getCollection("problems");
 		DBCursor cursor = collection.find();
